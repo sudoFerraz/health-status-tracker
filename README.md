@@ -2,6 +2,7 @@
 This is a simple tracker script that monitors change services health status and bitcoin/ethereum prices on the mac status bar
 
 ##Screenshots
+
 ![screenshot1](screenshot.png)
 
 ## Dependencies
