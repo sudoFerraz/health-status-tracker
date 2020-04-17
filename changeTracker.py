@@ -14,9 +14,9 @@ class AwesomeStatusBarApp(rumps.App):
         title = ''
         j = json.loads( urllib.urlopen( changeUrl ).read() )
         if (j['status']['description'] == 'All Systems Operational'):
-            title = title + '  Change Status: ' + u'\u2713' + '      '
+            title = title + '  Change Status:  ' + u'\u2713' + '      '
         else:
-            title = title + '  Change Status: SOMETHING IS WRONG     '
+            title = title + '  Change Status:  SOMETHING IS WRONG     '
         for option in options:
             url = coinbaseUrl % option
             j = json.loads( urllib.urlopen( url ).read() )
