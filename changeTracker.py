@@ -4,7 +4,7 @@ import json
 
 class AwesomeStatusBarApp(rumps.App):
     def __init__(self):
-        super(AwesomeStatusBarApp, self).__init__("Awesome App")
+        super(AwesomeStatusBarApp, self).__init__("Change Tracker")
 
     @rumps.timer(60)
     def changeTracker(self, _):
