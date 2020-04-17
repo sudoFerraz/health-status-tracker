@@ -10,7 +10,7 @@ pip install rumps
 python changeTracker.py
 
 # Run in the background
-## You can always add this into a personal rc on ~/.config to start on initialization
+#### You can always add this into a personal rc on ~/.config to start on initialization
 nohup python changetracker.py &
 
 
