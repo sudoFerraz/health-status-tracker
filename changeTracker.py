@@ -12,6 +12,11 @@ class AwesomeStatusBarApp(rumps.App):
         coinbaseUrl = 'https://api.coinbase.com/v2/prices/%s/spot'
         options = ['BTC-USD','ETH-USD']
         title = ''
+        j = json.loads( urllib.urlopen( changeUrl ).read() )
+        if (j['status']['description'] == 'All Systems Operational'):
+            title = title + '  Change Status: ' + u'\u2713' + '      '
+        else:
+            title = title + '  Change Status: SOMETHING IS WRONG     '
         for option in options:
             url = coinbaseUrl % option
             j = json.loads( urllib.urlopen( url ).read() )
@@ -19,11 +24,6 @@ class AwesomeStatusBarApp(rumps.App):
                 title = title + u'\u0243' + ' = ' + j['data']['amount'] + ' '
             else:
                 title = title + j['data']['base'] + ' = ' + j['data']['amount']
-        j = json.loads( urllib.urlopen( changeUrl ).read() )
-        if (j['status']['description'] == 'All Systems Operational'):
-            title = title + '  Change Status: ' + u'\u2713'
-        else:
-            title = title + '  Change Status: SOMETHING IS WRONG'
         self.title = title
 
 if __name__ == "__main__":
