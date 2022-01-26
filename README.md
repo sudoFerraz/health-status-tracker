@@ -1,4 +1,4 @@
-# change-tracker
+# health-status-tracker
 This is a simple tracker script that monitors change services health status and bitcoin/ethereum prices on the mac status bar
 
 NB! - This is a python2 script
